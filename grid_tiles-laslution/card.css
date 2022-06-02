@@ -1,0 +1,14 @@
+/* Cards */
+.card-container {
+    padding: 4rem 0;
+    display: grid;
+}
+
+.card {
+    border: 1px solid black;
+    margin-bottom: 3rem;
+}
+
+.card .info {
+    padding: 1rem;
+}

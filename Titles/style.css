@@ -1,0 +1,75 @@
+/* TILES */
+.titles-containter{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas: 
+    "a a a b" 
+    "a a a c" 
+    "d d d d"
+    "e f f f "
+    "e g h i";
+    gap: 2rem;
+    width: 90vw;
+    margin: auto;
+}
+.titles-containter img{
+    height: 100%;
+    width: 100%;
+object-fit: cover;
+
+}
+
+.title1 {
+    grid-area: a;
+}
+
+.title2 {
+    grid-area: b;
+}
+
+.title3 {
+    grid-area: c;
+}
+
+.title4 {
+    grid-area: d;
+}
+
+.title5 {
+    grid-area: e;
+}
+
+.title6 {
+    grid-area: f;
+}
+
+.title7 {
+    grid-area: g;
+}
+
+.title8 {
+    grid-area: h;
+}
+
+.title9 {
+    grid-area: i;
+}
+
+@media screen and (max-width: 900px) {
+    .titles-containter{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+}
+
+/* @media screen and (max-width: 500px) {
+    .titles-containter >div{
+        grid-area: unset;
+    }
+} */
+@media screen and (max-width: 500px) {
+    .titles-containter {
+        grid-template-columns: 1fr;
+    }
+}

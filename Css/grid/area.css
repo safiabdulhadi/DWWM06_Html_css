@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    height: 100vh;
+    /* Une autre façon de créer des grids,
+    c'est de nommer chaque élément de la grille avec grid-area et ensuite de
+    les placer avec grid-template-area
+    chaque guillement représente un ligne, chaque nom
+    une case. Il doit y 
+    avoir le même nombre de case à chaque ligne. */
+    grid-template-areas:
+        "header header header header header header"
+        "menu article article article chaussette chaussette "
+        "menu footer footer footer footer footer";
+}
+
+.item1 {
+    grid-area: header;
+    background-color: green;
+}
+
+.item2 {
+    grid-area: menu;
+    background-color: blue;
+}
+
+.item3 {
+    grid-area: article;
+    background-color: gold;
+}
+
+.item4 {
+    grid-area: chaussette;
+    background-color: rgb(16, 52, 65);
+}
+
+.item5 {
+    grid-area: footer;
+    background-color: tomato;
+}

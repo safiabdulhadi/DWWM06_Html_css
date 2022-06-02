@@ -1,0 +1,223 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.btn1 {
+    border: 5px solid #999;
+    color: #999;
+    transition-property: border-color, color, backgground-color, transform;
+    transition-duration: 0.5s, 0.5s, 0.5s, 1.5s;
+    transform: rotate(0deg);
+}
+
+.btn1:hover {
+    border-color: #ca1919;
+    color: #ca1919;
+    background-color: #e1b3b3;
+    transform: rotateY(360deg);
+    transition-property: border-color, color, backgground-color;
+    transition-duration: 2s;
+}
+
+/* font-size for span element */
+span {
+    font-size: 40px;
+}
+
+.btn2 {
+    background-color: #f27935;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.5s;
+    border: 2px solid#f27935;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+}
+
+.btn2 span {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.7rem;
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.btn2:hover {
+    border-color: #fff;
+}
+
+.btn2:hover span {
+    color: #f27935;
+    background-color: #fff;
+    transform: rotate(360deg);
+
+}
+
+.btn3 {
+    background-color: #f2225e;
+    color: #fff;
+    position: relative;
+    top: -5px;
+    padding: 0.75rem 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #656565;
+    transition-property: top, box-shadow, transform;
+    transition-duration: 0.2s, 0.2s, 1s;
+    transform: rotateY(0deg);
+}
+
+.btn3:hover {
+    top: 0;
+    box-shadow: 5px 5px 5px 0px #656565;
+}
+
+.btn3:active {
+    transform: rotateX(360deg);
+
+}
+
+.btn4 {
+    position: relative;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: #6709c6;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn::before,
+.btn4::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    border-top: 3px solid #6709c6;
+    -o-transition-property: width;
+    transition-duration: 0.5s;
+}
+
+.btn4::before {
+    top: -10px;
+    left: 0;
+
+}
+
+.btn4::after {
+    bottom: -10px;
+    right: 0;
+}
+
+.btn4:hover {
+    color: #000;
+}
+
+.btn4:hover::before,
+.btn4:hover::after {
+    width: 100%;
+}
+
+.btn4:active {
+    color: #d4086d;
+}
+
+.btn4:active::before,
+.btn4:active::after {
+    width: 100%;
+}
+
+/* 
+
+.container {
+    width: 700px;
+    height: 700px;
+
+}
+
+button {
+    padding: 30px 50px;
+    margin: 40px;
+    font-size: 30px;
+
+}
+
+.button1 {
+    border: 5px solid gray;
+    background-color: rgb(241, 238, 238);
+    padding: 30px 70px;
+
+}
+
+button:nth-child(1):hover {
+    border: 5px solid red;
+    color: red;
+    background-color: rgb(190, 110, 110);
+    transition-property: all;
+    transition-duration: 1s;
+    cursor: pointer;
+    transform: translate(3deg);
+}
+
+div .button2 {
+    background-color: rgb(224, 13, 13);
+    color: white;
+    border-radius: 30px;
+    box-shadow: 10px 8px 5px gray;
+
+}
+
+button:nth-child(2):hover {
+    background-color: rgb(224, 13, 13);
+    color: white;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.button3 {
+    border: 5px solid gray;
+    background-color: rgb(241, 238, 238);
+
+}
+
+div button:hover {
+    border: 5px solid red;
+    color: red;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.button4 {
+    border: 5px solid gray;
+    background-color: rgb(241, 238, 238);
+
+}
+
+button:nth-child(4):hover {
+    border-top: 5px solid #9c0e5c;
+    border-bottom: 5px solid #9c0e5c;
+    color: #9c0e5c;
+    transition-property: all;
+    transition-duration: 1s;
+} */

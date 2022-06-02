@@ -1,0 +1,50 @@
+body {
+    background-image: linear-gradient(to right, rgb(160, 110, 110), rgb(139, 35, 35));
+    position: relative;
+    height:100vh;
+}
+.content {
+    lign-content: center;
+    margin-top: 20%;
+    transform: translate(-50,-50%);
+}
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    /* transform: translate(-50%); */
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 6%;
+    align-content: center;
+
+}
+
+.div2 {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    /* transform: translate(-50%); */
+    margin-left: 56%;
+    margin-top: 10%;
+    align-content: center;
+    position: absolute;
+
+
+}
+
+.div3 {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    /* transform: translate(-50%); */
+    align-content: center;
+    margin-left: 50%;
+    margin-top: 10%;
+    position: absolute;
+
+
+}

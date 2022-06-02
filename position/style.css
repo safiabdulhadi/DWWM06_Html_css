@@ -1,0 +1,98 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 400vh;
+}
+/* Abec les différentes positions, on peut placer les éléments en utilisant les proprétés 
+top, bottom, right ou left */
+header {
+    padding: 1rem;
+    background-color: blueviolet;
+    color: antiquewhite;
+    text-align: center;
+    /* La position fixed sort l'élément du flux de la page,
+     et le garde toujours visible lors du scrolling */
+    position: fixed;
+    width: 100%;
+    /* Le z-index permet e choisir la position de l'élément sur l'axe Z. c'est à dire
+    sur la profondeur, par dédaut, tout les éléments sont à 0, une valeur négative
+    placera l'émément derrière alors qu'une valeur positive, le placera devant */
+    z-index: 1;
+    /* background image permet de choisir une image de fond, on peut en empiler
+    plusieurs en les séparnts d'une virgule. Les premières seront au dessus des suivantes */
+    background-image: url(2.jfif);
+    /* background position permet de déplacer l'image de fond */
+    background-repeat: no-repeat;
+    /* background size de quelle manière celle ci s'affiche */
+    background-position: center;
+    background-size: cover;
+    /* on peu tout regrouper sous la propriété background */
+}
+
+nav,
+main {
+    margin-top: 50px;
+    display: inline-block;
+    height: 100%;
+}
+
+nav {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    /* Malgré que les dégradé ne soient que des couleurs , pour css ce sont des images.
+    on peut utiliser linear-gradient pour créer un dégradé dans la position voulu en 
+    premier argument (optionnel) et ensuite ajouter autant e couleur que souhaité
+    et optionnnellement leur indiquer où commencer et finir */
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+nav ul {
+    /* La position sticky  gardera l'élément à ca position habituelle
+    mais dés que le scrolling correspondra à la position indiqué, l'élément
+    commencrera à suivre le scrolling, sans jamais sortir */
+    position: sticky;
+    top: 70px;
+}
+
+main {
+    width: calc(100% - 200px);
+    padding: 2rem;
+    background-color: tomato;
+    /* La position relative garde l'élément dans le flux de la page et permet de le déplacer par rapport à sa position d'origine. Mais on le verra plus souvent
+    utilisé en combinaison d'un enfant en position absolute */
+    position: relative;
+    background-image: linear-gradient(to right,red,#f06d06,rgb(255, 255, 0),green);
+
+}
+main p:first-child{
+    background-color: linear-gradient(to right,red,#f06d06,rgb(255, 255, 0),green);
+}
+main p:last-child{
+    background-image: conic-gradient(grey,red,pink);
+}
+button {
+    /* La position absolute sort l'élément du flux de la page, et permet
+    de le positionner par rapport à son parent relatif le plus proche, ou si aucun 
+    parent n'est en relatif, par rapport au viewport */
+    position: absolute;
+    /*     
+Centrer la position
+    top: 50%;
+    left: 50%;
+    position: 50%; 
+    font-size: 5rem;
+    transform: translate(-50%, -50%);
+    */
+
+
+
+    right: 0;
+    top: 0;
+}
