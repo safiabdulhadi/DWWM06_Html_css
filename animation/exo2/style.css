@@ -2,16 +2,20 @@
     display: flex;
 
 }
-.point, .cercle{
+
+.point,
+.cercle , #marquee {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-.cercle{
+
+.cercle {
     background-color: black;
 }
+
 .dot {
     width: 70px;
     height: 70px;
@@ -20,7 +24,7 @@
     /* background-color:black; */
     /* background-image: radial-gradient(circle, red, yellow, green);  */
     /* background-image: conic-gradient(red, yellow, green, blue, black); */
-    background: conic-gradient(rgb(211, 21, 21), rgb(230, 230, 10), rgb(9, 201, 9), aqua, rgb(24, 24, 207), rgb(148, 26, 148), rgb(221, 25, 25));
+    background: conic-gradient(rgb(138, 67, 67), rgb(230, 230, 10), rgb(9, 201, 9), aqua, rgb(24, 24, 207), rgb(148, 26, 148), rgb(221, 25, 25));
     /* background: linear-gradient(to right, blue 0%, blue 33%, #fff 33%, #fff 66%, red 66%, red 100%) margin: 0 15px; */
     animation: loader infinite 0.4s alternate;
 }
@@ -54,7 +58,8 @@
     animation: spin 2s linear infinite;
 }
 
-.circle::before, .circle::after {
+.circle::before,
+.circle::after {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -86,5 +91,37 @@
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+#marquee {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    justify-content: flex-start;
+
+}
+
+#marquee > p {
+    font-size: 100px;
+    line-height: 1.3rem;
+    font-family: monospace;
+    padding: 24px 0;
+    white-space: nowrap;
+    animation: marquee 25s infinite linear;
+
+}
+
+#marquee > p::after{
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsa cum sequi nihil......";
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
